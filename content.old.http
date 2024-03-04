@@ -1,11 +1,11 @@
 ### Find all content
-GET http://localhost:8080/api/content
+GET http://localhost:8080/api/old/content
 
 ### Get content by id
 GET http://localhost:8080/api/content/1
 
 ### Create new Content
-POST http://localhost:8080/api/content
+POST http://localhost:8080/api/old/content
 Content-Type: application/json
 
 {
@@ -20,7 +20,7 @@ Content-Type: application/json
 }
 
 ### Update a Content
-PUT http://localhost:8080/api/content/1
+PUT http://localhost:8080/api/old/content/1
 Content-Type: application/json
 
 {
@@ -35,7 +35,7 @@ Content-Type: application/json
 }
 
 ### Throw error if tryinh to update a Content that not existing
-PUT http://localhost:8080/api/content/999
+PUT http://localhost:8080/api/old/content/999
 Content-Type: application/json
 
 {
@@ -50,4 +50,4 @@ Content-Type: application/json
 }
 
 ### Delete a Content
-DELETE http://localhost:8080/api/content/1
+DELETE http://localhost:8080/api/old/content/1
