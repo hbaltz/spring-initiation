@@ -9,36 +9,44 @@ POST http://localhost:8080/api/content
 Content-Type: application/json
 
 {
+  "id": 2,
   "title": "How to be a bad developer",
   "desc": "Interrogation about what define a bad developer",
   "status": "IN_PROGRESS",
   "contentType": "COURSE",
-  "dateCreated": "2024-02-28T10:52:18.103979"
+  "dateCreated": "2024-02-28T10:52:18.103979",
+  "dateUpdated": null,
+  "url": ""
 }
 
 ### Update a Content
-PUT http://localhost:8080/api/content/2
+PUT http://localhost:8080/api/content/1
 Content-Type: application/json
 
 {
+  "id": 1,
   "title": "How to be a GREAT developer",
   "desc": "How to become the best developer in the world",
   "status": "IN_PROGRESS",
   "contentType": "ARTICLE",
   "dateCreated": "2024-02-28T10:52:18.103979",
-  "dateUpdated": "2024-02-28T11:52:18.103979"
+  "dateUpdated": "2024-02-28T11:52:18.103979",
+  "url": ""
 }
 
-### Throw error if trying to update a Content that not existing
+### Throw error if tryinh to update a Content that not existing
 PUT http://localhost:8080/api/content/999
 Content-Type: application/json
 
 {
+  "id": 1,
   "title": "How to be a GREAT developer",
   "desc": "How to become the best developer in the world",
   "status": "IN_PROGRESS",
   "contentType": "ARTICLE",
-  "dateUpdated": "2024-02-28T10:52:18.103979"
+  "dateCreated": "2024-02-28T10:52:18.103979",
+  "dateUpdated": "2024-02-28T11:52:18.103979",
+  "url": ""
 }
 
 ### Delete a Content
