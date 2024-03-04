@@ -2,6 +2,7 @@ package dev.hbaltz.contentcalendar.content.controller;
 
 import dev.hbaltz.contentcalendar.content.exception.ContentNotFoundresponseStatusException;
 import dev.hbaltz.contentcalendar.content.model.Content;
+import dev.hbaltz.contentcalendar.content.model.Status;
 import dev.hbaltz.contentcalendar.content.repository.ContentRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -83,15 +84,28 @@ public class ContentJdbcDataController {
     }
 
     /**
-     * @param keyword the keyword to filter the title (Warning it is case sensitive)
+     * @param keyword the keyword to filter using the title (Warning it is case sensitive)
      * @return all contents with the title containing the keyword
      *
      * I wouldn't do that like that to filter my content,
      * I would prefer to pass get parameters to have different filters applied at the same time
      * At moment I would continue to follow the tutorial
      */
-    @GetMapping("/filter/{keyword}")
+    @GetMapping("/filter/title/{keyword}")
     public List<Content> findContentListByTitle(@PathVariable String keyword) {
         return contentRepository.findAllByTitleContains(keyword);
+    }
+
+    /**
+     * @param status the status of the content
+     * @return all contents with the title containing the keyword
+     *
+     * I wouldn't do that like that to filter my content,
+     * I would prefer to pass get parameters to have different filters applied at the same time
+     * At moment I would continue to follow the tutorial
+     */
+    @GetMapping("/filter/status/{status}")
+    public List<Content> findContentListByTitle(@PathVariable Status status) {
+        return contentRepository.findAllByStatus(status);
     }
 }
