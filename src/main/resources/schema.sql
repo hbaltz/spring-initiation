@@ -8,9 +8,3 @@ CREATE TABLE IF NOT EXISTS Content (
     date_updated TIMESTAMP,
     url VARCHAR(255)
 );
-
-INSERT INTO
-    Content(title,description,status,content_type)
-VALUES
-    ('Test', 'test desc', 'IN_PROGRESS', 'ARTICLE')
-;
