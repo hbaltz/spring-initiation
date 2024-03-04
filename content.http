@@ -43,3 +43,9 @@ Content-Type: application/json
 
 ### Delete a Content
 DELETE http://localhost:8080/api/content/1
+
+### Find all content (filter by keyword in the title)
+GET http://localhost:8080/api/content/filter/title/Test
+
+### Find all content (filter by keyword in the title)
+GET http://localhost:8080/api/content/filter/status/IN_PROGRESS
