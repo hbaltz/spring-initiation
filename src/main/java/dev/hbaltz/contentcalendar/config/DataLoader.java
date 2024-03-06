@@ -5,13 +5,17 @@ import dev.hbaltz.contentcalendar.content.model.Status;
 import dev.hbaltz.contentcalendar.content.model.Type;
 import dev.hbaltz.contentcalendar.content.repository.ContentRepository;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 
 /**
  * Used to load initial data in our application
+ *
+ * Only for dev profile
  */
+@Profile("dev")
 @Component
 public class DataLoader implements CommandLineRunner {
 
