@@ -19,10 +19,10 @@ public class HomeController {
     private String about;
 
     /**
-     * @return the welcome message
+     * @return the home properties
      */
     @GetMapping("/")
-    public Map<String,String> displayWelcomeMessage() {
+    public Map<String,String> home() {
         return Map.of(
                 "welcomeMessage", welcomeMessage,
                 "about", about
