@@ -1,10 +1,8 @@
 package dev.hbaltz.contentcalendar.home.controller;
 
-import org.springframework.beans.factory.annotation.Value;
+import dev.hbaltz.contentcalendar.config.ContentCalendarProperties;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Map;
 
 /**
  * Used to controls api for home page
@@ -12,20 +10,18 @@ import java.util.Map;
 @RestController
 public class HomeController {
 
-    @Value("${cc.welcome-message: Default Welcome Message}")
-    private String welcomeMessage;
+    private final ContentCalendarProperties properties;
 
-    @Value("${cc.about: Default About}")
-    private String about;
+    public HomeController(ContentCalendarProperties properties) {
+        this.properties = properties;
+    }
+
 
     /**
      * @return the home properties
      */
     @GetMapping("/")
-    public Map<String,String> home() {
-        return Map.of(
-                "welcomeMessage", welcomeMessage,
-                "about", about
-        );
+    public ContentCalendarProperties home() {
+        return properties;
     }
 }
