@@ -12,7 +12,7 @@ import java.util.Map;
 @RestController
 public class HomeController {
 
-    @Value("${cc.welcomeMessage: Default Welcome Message}")
+    @Value("${cc.welcome-message: Default Welcome Message}")
     private String welcomeMessage;
 
     @Value("${cc.about: Default About}")
