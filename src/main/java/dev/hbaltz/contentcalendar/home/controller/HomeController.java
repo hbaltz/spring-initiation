@@ -16,7 +16,6 @@ public class HomeController {
         this.properties = properties;
     }
 
-
     /**
      * @return the home properties
      */
