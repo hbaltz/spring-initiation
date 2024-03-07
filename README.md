@@ -34,11 +34,11 @@ You can do it with this command :
 
 ## Launch the application with maven
 
-## Prerequisite:
+### Prerequisite:
 * Java > 17
 * A postgresql database
 
-## Adapt properties
+### Adapt properties
 In [application.properties](./src/main/resources/application.properties)
 
 Adapt the value of the connection to the db :
@@ -51,7 +51,7 @@ spring.datasource.password=# THE PASSWORD IN YOUR DATABASE
 In production mode we should define this value dynamically during the build (during the CIp hase). 
 At least the password shouldn't be in clear in the code
 
-## Launch the application
+### Launch the application
 
 Use the maven wrapper to launch the application :
 ```bash
