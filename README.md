@@ -6,6 +6,33 @@ Following this course : [Spring Boot Tutorial for Beginners - 2023 Crash Course 
 I adapt the code organisation, the variable name that are not very clear in the tutorial
 I also change a bit the method in the class to add more control and well separate the methods and class by responsibility
 
+## Launch this application with docker
+
+### Prerequisites :
+* Docker
+
+### Launch this application
+
+The first time or after a change :
+```bash
+./build_and_start.sh
+```
+
+In other case :
+```bash
+./start.sh
+```
+
+### Stop the application
+
+You can do it with this command :
+
+```bash
+./stop.sh
+```
+
+## Launch the application with maven
+
 ## Prerequisite:
 * Java > 17
 * A postgresql database
@@ -29,4 +56,3 @@ Use the maven wrapper to launch the application :
 ```bash
 ./mvnw spring-boot:run
 ```
-

@@ -18,14 +18,18 @@ The spring-boot-loader modules lets Spring Boot support executable jar and war f
 
 To create an executable JAR run the following command:
 
-`./mvnw clean package`
+```bash 
+./mvnw clean package
+```
 
 - **clean**: Deletes the target folder
 - **package**: Invoke Maven's package phase, which will cause the verify, compile and test phases to be invoked in the correct order.
 
 To run the executable JAR with Java run the following command:
 
-`java -jar target/content-calendar-0.0.1-SNAPSHOT.jar`
+```bash
+java -jar target/content-calendar-0.0.1-SNAPSHOT.jar
+```
 
 https://docs.spring.io/spring-boot/docs/current/reference/html/executable-jar.html#appendix.executable-jar
 
@@ -41,11 +45,13 @@ https://docs.spring.io/spring-boot/docs/current/reference/html/container-images.
 
 As long as you have Docker desktop running you can run the following command to create an OCI image:
 
-`./mvnw spring-boot:build-image`
+```bash
+./mvnw spring-boot:build-image
 
-`docker image ls -a`
+docker image ls -a
 
-`docker run -it -p8080:8080 content-calendar:0.0.1-SNAPSHOT`
+docker run -it -p8080:8080 content-calendar:0.0.1-SNAPSHOT
+```
 
 To learn more about Packaging OCI Images check out the [documentation](https://docs.spring.io/spring-boot/docs/3.0.1/maven-plugin/reference/htmlsingle/#build-image).
 
@@ -55,7 +61,9 @@ Spring Boot 3.0 applications can now be converted into GraalVM native images whi
 
 With the native profile active, you can invoke the native:compile goal to trigger native-image compilation:
 
-`mvn -Pnative native:compile`
+```bash
+mvn -Pnative native:compile
+```
 
 The result will be a native executable in the `target/` directory.
 
@@ -63,7 +71,9 @@ Spring Boot includes buildpack support for native images directly for both Maven
 
 To build the image, you can run the `spring-boot:build-image` goal with the native profile active:
 
-`mvn -Pnative spring-boot:build-image`
+```bash
+mvn -Pnative spring-boot:build-image
+```
 
 If you're using buildpacks on ARM64 (macOS) you will want to check out the article below by DaShaun Carter.
 
