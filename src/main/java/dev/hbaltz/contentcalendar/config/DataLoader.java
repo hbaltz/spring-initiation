@@ -1,14 +1,15 @@
 package dev.hbaltz.contentcalendar.config;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.hbaltz.contentcalendar.content.model.Content;
-import dev.hbaltz.contentcalendar.content.model.Status;
-import dev.hbaltz.contentcalendar.content.model.Type;
 import dev.hbaltz.contentcalendar.content.repository.ContentRepository;
+import com.fasterxml.jackson.core.type.TypeReference;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
-import java.time.LocalDateTime;
+import java.io.InputStream;
+import java.util.List;
 
 /**
  * Used to load initial data in our application
@@ -20,26 +21,23 @@ import java.time.LocalDateTime;
 public class DataLoader implements CommandLineRunner {
 
     private final ContentRepository contentRepository;
+    private final ObjectMapper objectMapper;
 
-    public DataLoader(ContentRepository contentRepository) {
+    public DataLoader(
+            ContentRepository contentRepository,
+            ObjectMapper objectMapper
+    ) {
         this.contentRepository = contentRepository;
+        this.objectMapper = objectMapper;
     }
 
     @Override
     public void run(String... args) throws Exception {
         if (contentRepository.findAll().isEmpty()) {
-            contentRepository.save(
-                new Content(
-                    null,
-                    "Test",
-                    "test desc",
-                    Status.IN_PROGRESS,
-                    Type.ARTICLE,
-                    LocalDateTime.now(),
-                    null,
-                    null
-                )
-            );
+            try(InputStream inputStream = TypeReference.class.getResourceAsStream("/data/content.json")) {
+                List<Content> contentDataList = objectMapper.readValue(inputStream, new TypeReference<List<Content>>(){});
+                contentRepository.saveAll(contentDataList);
+            }
         }
     }
 }

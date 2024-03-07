@@ -1,0 +1,62 @@
+[
+  {
+    "id": null,
+    "title": "Spring Boot Adventures: Mastering the Art of Beans",
+    "desc": "Embark on a journey through the whimsical world of Spring Boot beans. Uncover the secrets of dependency injection and inversion of control.",
+    "status": "PUBLISHED",
+    "contentType": "ARTICLE",
+    "dateCreated": "2023-01-27T00:00:00.000000",
+    "dateUpdated": null,
+    "url": "https://www.springadventures.com/beans-masterclass"
+  },
+  {
+    "id": null,
+    "title": "Slaying Dragons: Defending Your REST Kingdom with Spring Security",
+    "desc": "Arm yourself with the formidable arsenal of Spring Security and vanquish nefarious intruders from your RESTful realm.",
+    "status": "PUBLISHED",
+    "contentType": "ARTICLE",
+    "dateCreated": "2022-09-06T00:00:00.000000",
+    "dateUpdated": null,
+    "url": "https://www.springfortress.com/defend-rest-kingdom"
+  },
+  {
+    "id": null,
+    "title": "The Great Code Elixir: Brewing GraphQL Potions with Spring Magic",
+    "desc": "Dive into the enchanting world of GraphQL sorcery and learn the ancient art of weaving Spring spells into your APIs.",
+    "status": "PUBLISHED",
+    "contentType": "ARTICLE",
+    "dateCreated": "2022-05-17T00:00:00.000000",
+    "dateUpdated": null,
+    "url": "https://www.springalchemy.com/graphql-elixir"
+  },
+  {
+    "id": null,
+    "title": "Journey to the Future: Crafting Spring Boot Apps with ChatGPT AI",
+    "desc": "Embark on an odyssey into the unknown realms of AI-driven Spring Boot development. Unleash the power of ChatGPT to shape the future of your applications.",
+    "status": "PUBLISHED",
+    "contentType": "VIDEO",
+    "dateCreated": "2023-02-14T00:00:00.000000",
+    "dateUpdated": null,
+    "url": "https://www.springvoyage.com/ai-driven-development"
+  },
+  {
+    "id": null,
+    "title": "Forging Legends: Crafting Native Java Artifacts with GraalVM Forges",
+    "desc": "Join the ranks of legendary Java craftsmen and wield the mighty GraalVM forge to shape native Java artifacts that defy convention.",
+    "status": "PUBLISHED",
+    "contentType": "VIDEO",
+    "dateCreated": "2023-02-03T00:00:00.000000",
+    "dateUpdated": null,
+    "url": "https://www.graalvmlegends.com/native-artifacts"
+  },
+  {
+    "id": null,
+    "title": "IntelliJ Chronicles: Unraveling the Mysteries of the Ultimate IDE",
+    "desc": "Embark on a cinematic journey through the realms of IntelliJ, uncovering its hidden treasures and mastering its arcane powers.",
+    "status": "PUBLISHED",
+    "contentType": "VIDEO",
+    "dateCreated": "2023-02-01T00:00:00.000000",
+    "dateUpdated": null,
+    "url": "https://www.intellijchronicles.com/ultimate-ide-mysteries"
+  }
+]
