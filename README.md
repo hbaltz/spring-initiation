@@ -15,7 +15,8 @@ I also change a bit the method in the class to add more control and well separat
 
 The first time or after a change :
 ```bash
-./build_and_start.sh
+./build.sh
+./start.sh
 ```
 
 In other case :
